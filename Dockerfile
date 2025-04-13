@@ -8,4 +8,4 @@ RUN  pip install pybind11
 RUN  wget https://github.com/kvcache-ai/Mooncake/archive/refs/heads/main.zip
 RUN  unzip main.zip
 RUN  cd Mooncake-main && bash dependencies.sh && mkdir build && cd build \
-       && cmake .. && make -j && make install
+       && cmake .. && make VERBOSE=1 && make install
