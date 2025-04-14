@@ -11,5 +11,5 @@ RUN  cd Mooncake-main && bash dependencies.sh && . ~/.bashrc && mkdir build && c
        && cmake .. && make VERBOSE=1 && make install
 RUN git clone https://github.com/vllm-project/vllm.git
 WORKDIR /vllm
-RUN pip3 install cmake --upgrade
-RUN pip3 install -e .
+# RUN pip3 install cmake --upgrade
+# RUN pip3 install -e .
