@@ -11,7 +11,5 @@ RUN  cd Mooncake-main && bash dependencies.sh && . ~/.bashrc && mkdir build && c
        && cmake .. && make VERBOSE=1 && make install
 RUN git clone https://github.com/vllm-project/vllm.git
 WORKDIR /vllm
-RUN  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
-RUN  dpkg -i cuda-keyring_1.1-1_all.deb
-RUN  apt-get -y install cuda-toolkit-12-8
-RUN pip3 install -e .
+# RUN pip3 install cmake --upgrade
+# RUN pip3 install -e .
