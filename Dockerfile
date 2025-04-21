@@ -6,7 +6,7 @@ RUN  apt update
 RUN  apt install -y unzip wget cmake git sudo
 RUN  pip install pybind11
 RUN  git clone https://github.com/kvcache-ai/Mooncake.git
-RUN  cd Mooncake-main && bash dependencies.sh && . ~/.bashrc && mkdir build && cd build \
+RUN  cd Mooncake && bash dependencies.sh && . ~/.bashrc && mkdir build && cd build \
        && cmake .. && make VERBOSE=1 && make install
 RUN git clone https://github.com/vllm-project/vllm.git
 WORKDIR /vllm
