@@ -15,4 +15,4 @@ RUN sudo dpkg -i cuda-keyring_1.1-1_all.deb
 RUN sudo apt-get update
 RUN sudo apt-get -y install cuda-toolkit-12-8
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-RUN pip3 install -e .
+# RUN pip3 install -e .
