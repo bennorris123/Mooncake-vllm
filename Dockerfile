@@ -14,5 +14,4 @@ RUN wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86
 RUN sudo dpkg -i cuda-keyring_1.1-1_all.deb
 RUN sudo apt-get update
 RUN sudo apt-get -y install cuda-toolkit-12-8
-RUN pip3 install cmake --upgrade
 RUN pip3 install -e .
