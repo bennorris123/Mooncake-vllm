@@ -1,0 +1,8 @@
+{
+    "prefill_url": "192.168.0.137:13003",
+    "decode_url": "192.168.0.139:13003",
+    "metadata_server": "192.168.0.139:2379",
+    "metadata_backend": "etcd",
+    "protocol": "rdma",
+    "device_name": "erdma_0"
+  }

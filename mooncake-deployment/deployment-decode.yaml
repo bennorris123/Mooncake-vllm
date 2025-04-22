@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mooncake-vllm
-        image: ghcr.io/bennorris123/mooncake-vllm:main
+        image: ghcr.io/xxx/mooncake-vllm:main
         command: ["/bin/sh", "-c", "pip install -e ."]
         resources:
           limits:
