@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mooncake-vllm-deployment-prefill
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mooncake-vllm-prefill
+  template:
+    metadata:
+      labels:
+        app: mooncake-vllm-prefill
+    spec:
+      containers:
+      - name: mooncake-vllm
+        image: ghcr.io/bennorris123/mooncake-vllm:main
+        command: ["/bin/sh", "-c", "pip install -e ."]
+        resources:
+          limits:
+            cpu: "22"
+            memory: "90Gi"
+          requests:
+            cpu: "20"
+            memory: "80Gi"
+      nodeSelector:
+        node-type: g4g.kube.small-1
